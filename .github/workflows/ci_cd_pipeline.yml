@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout  # Specify the version of the action
+        uses: actions/checkout@v4  # Specify the version of the action
 
       - name: Setup Java JDK
         uses: actions/setup-java@v2  # Corrected the action name
