@@ -1,0 +1,20 @@
+name: CI/CD Pipeline for Ticket Booking System
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  job1-cicd_pipeline:
+    runs-on: ubuntu-latest
+
+      steps:
+        - name: Checkout code
+          uses: actions/checkout
+
+        - name: Setup java jdk
+          uses: fleshgrinder/setup-java
+
+        - name: Check for java jdk version
+          run: java --version
