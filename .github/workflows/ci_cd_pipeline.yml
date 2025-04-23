@@ -9,15 +9,15 @@ jobs:
   job1-cicd_pipeline:
     runs-on: ubuntu-latest
 
-  steps:
-    - name: Checkout code
-      uses: actions/checkout
+    steps:
+      - name: Checkout code
+        uses: actions/checkout
 
-    - name: Setup java jdk
-      uses: actions/java-setup@v4
-        with:
-          distribution: 'oracle'
-          java-version: '21'
+      - name: Setup java jdk
+        uses: actions/java-setup@v4
+          with:
+            distribution: 'zulu'
+            java-version: '21'
 
-    - name: Run sample java file hello world
-      run: java ../../src/test/java/com/example/mysqldemo/JavaTestHello.java
+      - name: Run sample java file hello world
+        run: java ../../src/test/java/com/example/mysqldemo/JavaTestHello.java
